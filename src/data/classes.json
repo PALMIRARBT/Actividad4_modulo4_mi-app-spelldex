@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Bard",
+    "slug": "bard",
+    "description": "Bards are versatile performers and spellcasters, using music and magic to inspire allies and confound foes. They can cast spells from a wide range of schools and are known for their charm and wit."
+  },
+  {
+    "name": "Cleric",
+    "slug": "cleric",
+    "description": "Clerics are divine spellcasters who draw power from a deity or divine force. They can heal, protect, and smite their enemies, serving as both warriors and healers."
+  },
+  {
+    "name": "Druid",
+    "slug": "druid",
+    "description": "Druids are guardians of nature, able to shapeshift into animals and wield nature-based magic. They can heal, summon creatures, and control the elements."
+  },
+  {
+    "name": "Sorcerer",
+    "slug": "sorcerer",
+    "description": "Sorcerers are innate spellcasters who possess magical abilities due to their bloodline or a mystical event. They can cast spells spontaneously and are known for their raw magical power."
+  },
+  {
+    "name": "Warlock",
+    "slug": "warlock",
+    "description": "Warlocks are spellcasters who gain their powers through a pact with an otherworldly patron. They wield eldritch magic and can cast spells that manipulate reality in unique ways."
+  },
+  {
+    "name": "Wizard",
+    "slug": "wizard",
+    "description": "Wizards are scholarly spellcasters who learn and master magic through study and practice. They can cast a wide variety of spells and are known for their intelligence and versatility."
+  }
+]

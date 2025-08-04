@@ -1,0 +1,26 @@
+@import "./fonts.css";
+@import "./colors.css";
+@import "./z-index.css";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Uncial Antiqua", "Times New Roman", serif;
+  background: var(--bg);
+  color: var(--ink-medium);
+  min-height: 100vh;
+
+  /* center Y */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  font-family: inherit;
+}

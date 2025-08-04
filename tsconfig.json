@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    /* type checking */
+    "strict": true, // turn on strict mode family
+    "noFallthroughCasesInSwitch": true, // every switch case should break or return
+    /* modules */
+    "baseUrl": "src", // base path for imports
+    "paths": {
+      "src/*": [
+        "*"
+      ]
+    },
+    "module": "ESNext", // ESModules & allows «import.meta»
+    "moduleResolution": "Node", // recommended: ts mimic node resolution
+    "resolveJsonModule": true, // allows .json files
+    /* language */
+    "target": "ES2016",
+    "jsx": "react-jsx",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    /* js support */
+    "allowJs": true, // allows .js files
+    /* Interop Constraints */
+    "esModuleInterop": true, // recommended: compatibility with libraries using CommonJS
+    "allowSyntheticDefaultImports": true, // allows «import Foo from 'foo'»
+    "forceConsistentCasingInFileNames": true, // checks for case sensitivity file names
+    "isolatedModules": true, // force all files to import/export (no global scripts)
+    /* completeness */
+    "skipLibCheck": true, // skip checking node_modules/*.d.ts files
+    /* emit */
+    "noEmit": true // checks for errors only
+  },
+  "include": [
+    "src",
+    "./jest.setup.ts",
+  ]
+}

@@ -1,0 +1,70 @@
+/*
+  Estilos para DangerEndScreen: fondo animado, partículas, resplandor y texto impactante
+*/
+
+.dangerEndScreenBg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at 50% 40%, #e53935 0%, #000 80%);
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff2;
+  box-shadow: 0 0 24px #e53935, 0 0 48px #fff2;
+  animation: particle-float 3s infinite linear;
+}
+
+@keyframes particle-float {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  50% { transform: translateY(-40px) scale(1.2); opacity: 0.7; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.dangerEndScreenContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.dangerEndImage {
+  width: 160px;
+  height: 160px;
+  border-radius: 32px;
+  box-shadow: 0 0 64px #e53935, 0 0 0 16px #fff2;
+  margin-bottom: 32px;
+  animation: danger-end-glow 2s infinite alternate;
+}
+
+@keyframes danger-end-glow {
+  0% { box-shadow: 0 0 64px #e53935, 0 0 0 16px #fff2; }
+  50% { box-shadow: 0 0 96px #e53935cc, 0 0 0 24px #fff3; }
+  100% { box-shadow: 0 0 64px #e53935, 0 0 0 16px #fff2; }
+}
+
+.dangerEndTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 24px #e53935, 0 0 8px #000;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+
+.dangerEndText {
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 0 0 8px #e53935, 0 0 4px #000;
+  margin-bottom: 32px;
+  max-width: 480px;
+  text-align: center;
+}

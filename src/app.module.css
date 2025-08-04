@@ -1,0 +1,61 @@
+/* Main app container with max-width */
+main {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  padding: 2rem;
+}
+
+/* Media queries for responsive behavior */
+@media (max-width: 800px) {
+  main {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 1rem;
+    max-width: 100%;
+  }
+}
+
+/* Paper grid texture overlay */
+main::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      var(--bg-texture) 2px,
+      var(--bg-texture) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      var(--bg-texture) 2px,
+      var(--bg-texture) 4px
+    );
+  pointer-events: none;
+  z-index: var(--z-paper-texture);
+}
+
+main > * {
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@bg3-spelldex/crawler",
+  "version": "0.1.0",
+  "description": "crawler to https://bg3.wiki/wiki/List_of_all_spells_(sortable)",
+  "license": "MIT",
+  "author": "manutero.developer@gmail.com",
+  "type": "module",
+  "main": "fetch-spell-list.js",
+  "scripts": {
+    "fetch-images": "node fetch-images.js",
+    "fetch-spell-list": "node fetch-spell-list.js",
+    "fetch-spell-list-by-class": "node fetch-spell-list-by-class.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "1.9.0",
+    "cheerio": "1.0.0"
+  }
+}

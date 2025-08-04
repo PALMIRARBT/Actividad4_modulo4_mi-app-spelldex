@@ -1,0 +1,90 @@
+.spell.danger {
+  border: 2px solid #e53935;
+  box-shadow: 0 0 8px #e53935, 0 0 0 2px #ffeaea;
+  animation: danger-border-blink 1s infinite alternate;
+}
+
+@keyframes danger-border-blink {
+  0% {
+    border-color: #e53935;
+    box-shadow: 0 0 8px #e53935, 0 0 0 2px #ffeaea;
+  }
+  50% {
+    border-color: #ff9800;
+    box-shadow: 0 0 16px #e53935cc, 0 0 0 4px #ffeaea;
+  }
+  100% {
+    border-color: #e53935;
+    box-shadow: 0 0 8px #e53935, 0 0 0 2px #ffeaea;
+  }
+}
+
+.inactive {
+  opacity: 0.3;
+  filter: grayscale(100%);
+  pointer-events: none;
+  cursor: default;
+}
+
+@import './pulse.css';
+
+.spell {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--ink-light);
+  opacity: 0.2;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
+  --box-shadow-highlight: 0 0 5px var(--accent, var(--gold-accent)),
+    0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.spell.highlighted {
+  box-shadow: var(--box-shadow-highlight);
+}
+
+.spell.highlighted,
+.spell.detailed {
+  opacity: 1;
+  border: 2px solid var(--accent, var(--gold-accent));
+}
+
+.spell.detailed {
+  width: 32px;
+  height: 32px;
+  background-color: var(--ink-light);
+  cursor: pointer;
+  transition: width var(--randomDuration, 0.3s) ease var(--randomDelay, 1s),
+    height var(--randomDuration, 0.3s) ease var(--randomDelay, 1s),
+    opacity var(--randomDuration, 0.3s) ease;
+}
+
+.spell.detailed .image {
+  position: relative;
+}
+
+.spell.detailed .image .icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.spell.detailed .image .upcast {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  bottom: -5px;
+  right: -5px;
+  border-radius: 20%;
+  object-fit: cover;
+  background-color: var(--ink-medium);
+}
+
+.spell.selected {
+  background-color: var(--ink-dark);
+  box-shadow: var(--box-shadow-highlight);
+  outline: 1px solid var(--accent, var(--gold-accent));
+  animation: pulse 2s infinite ease-in-out;
+}

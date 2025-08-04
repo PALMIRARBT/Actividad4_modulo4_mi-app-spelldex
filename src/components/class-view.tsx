@@ -1,6 +1,4 @@
-  function handleReturn() {
-    navigate("/");
-  }
+// ...existing code...
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { ClassGrid } from "src/components/class-grid";
